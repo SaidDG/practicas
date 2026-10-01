@@ -4,15 +4,15 @@
   <meta charset="UTF-8"> <!-- el charset ayuda a que se puedan escribir o interpretar letras con acentos, caracteres o letras ñ  -->
   <title>Horario 5J</title> <!-- es el titulo de la pagina -->
   <style>
-    table { width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif; } /* aqui se estalecen cosas clabe de la tabla como el tamaño, */
-    th, td { border: 1px solid #aaa; padding: 6px; }
-    th { background: #eee; }
-    .hora { background: #f9f9f9; font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif; } /* aqui se estalecen cosas clabe de la tabla como el tamaño, elimina espacios entre celdas, centra el texto y cambia la tipografia */
+    th, td { border: 1px solid #aaa; padding: 6px; } /*  establece el grosor de la linea de la tabla, el color de esta y un margen */
+    th { background: #eee; } /* cambia el color del fondo */
+    .hora { background: #f9f9f9; font-weight: bold; }  /* con el . hora se define el color del fondo y cambia el tipo de letra a anegrita, aqui lo definimos para solo usar el .hora cuadno lo necesitems y no poner todo manualmente */ 
   </style>
 </head>
 <body>
 
-  <table>
+  <table>  <!-- se abre la tabla -->
     <tr>
       <th></th>
       <th>Lunes</th>
@@ -22,17 +22,17 @@
       <th>Viernes</th>
     </tr>
 
-    <!-- 7:00 a 8:00 -->
+    <!-- fila de las 7:00 a 8:00 -->
     <tr>
-      <td class="hora">7:00<br>8:00</td>
-      <td></td>
-      <td style="background:#fff3cd;">5* CH 2<br>Juarez<br>AULA 38</td>
+      <td class="hora">7:00<br>8:00</td> <!-- aqui llamamos a .hora con class para establecer el diseño pre establecido a solo la celda de la hora -->
+      <td></td> <!-- esta vacio porque no hay niinguna clase esta hora -->
+      <td style="background:#fff3cd;">5* CH 2<br>Juarez<br>AULA 38</td> <!-- con el style cambiamos el color del fondo en la celda -->
       <td style="background:#e2e3e5;">5* Apli. Adm<br>Estrada<br>AULA 38</td>
       <td style="background:#e2e3e5;">5* Apli. Adm<br>Estrada<br>AULA 38</td>
       <td style="background:#cce5ff;">5* Ingles 5<br>Terrazas<br>AULA 38</td>
     </tr>
 
-    <!-- 8:00 a 9:00 -->
+    <!-- fila de 8:00 a 9:00 -->
     <tr>
       <td class="hora">8:00<br>9:00</td>
       <td></td>
@@ -52,40 +52,39 @@
       <td rowspan="2" style="background:#ffe8d6;">PROG M4S1<br>Meza<br>AULA 38</td>
     </tr>
 
-    <!-- 10:00 a 10:50 -->
+    <!-- fila de 10:00 a 10:50 -->
     <tr>
       <td class="hora">10:00<br>10:50</td>
       <td style="background:#d4edda;">5* CNeYT 5<br>Reyes<br>AULA 38</td>
       <td style="background:#cce5ff;">5* Ingles 5<br>Terrazas<br>AULA 38</td>
     </tr>
 
-    <!-- RECREO -->
+    <!-- apartado de la fila de RECESO-->
     <tr style="background:#e0f2fe; font-weight:bold;">
       <td class="hora">recreo</td>
-      <td colspan="5">RECREO</td>
+      <td colspan="5">RECREO</td> <!-- con colspan hacemos que la celda se "una" en una sola-->
     </tr>
 
-    <!-- 11:10 a 12:00 -->
+    <!-- fila de 11:10 a 12:00 -->
     <tr>
       <td class="hora">11:10<br>12:00</td>
       <td style="background:#e8dff5;">PROG M4S2<br>Gonzales A<br>AULA 38</td>
       <td style="background:#e8dff5;">PROG M4S2<br>Gonzales A<br>AULA 38</td>
-      <td rowspan="2" style="background:#d4edda;">5* CNeYT 5<br>Reyes<br>AULA 38</td>
-      <!-- Jueves unido con rowspan="2" -->
+      <td rowspan="2" style="background:#d4edda;">5* CNeYT 5<br>Reyes<br>AULA 38</td> <!-- aqui volvemos a usar el rowspan para unir las celdas donde tocan dos modulos de la misma clase -->
       <td rowspan="2" style="background:#e8dff5;">PROG M4S2<br>Gonzales A<br>AULA 38</td>
       <td style="background:#d4edda;">5* CNeYT 5<br>Reyes<br>AULA 38</td>
     </tr>
 
-    <!-- 12:00 a 13:00 -->
+    <!-- fila de las 12:00 a 13:00 -->
     <tr>
       <td class="hora">12:00<br>13:00</td>
       <td style="background:#f8d7da;">5* FS<br>Meza<br>AULA 38</td>
       <td style="background:#cce5ff;">5* Ingles 5<br>Terrazas<br>AULA 38</td>
-      <!-- Se elimina Miércoles y Jueves porque ya vienen unidos de la fila anterior -->
+      <!-- aqui hacen falta dos dias porque ya se añadieron al momento de unir las celdas para los modulos seguidos -->
       <td style="background:#e8dff5;">PROG M4S2<br>Gonzales A<br>AULA 38</td>
     </tr>
 
-    <!-- 13:00 a 14:00 -->
+    <!-- fila de 13:00 a 14:00 -->
     <tr>
       <td class="hora">13:00<br>14:00</td>
       <td style="background:#d1e7dd;">5* TSDM 2<br>Macias<br>AULA 38</td>
